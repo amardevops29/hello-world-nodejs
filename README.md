@@ -1,9 +1,21 @@
 ## Hello World Node.js Project
 
 ## Overview
-### [Note: Install Docker-Desktop and start WSL, then enable Kubernetes inside Docker-Desktop]
-### Check whether Kuberntes and Docker commands works on your command prompt
-### Check verion using commands as follows:
+This is a **Hello World Node.js** application, which is containerized using Docker, pushed to Docker Hub, and deployed on a **Kubernetes cluster**. The application is exposed via a **Kubernetes service** with the type set to **NodePort** to allow external access.
+
+This project demonstrates the entire process:
+- **Creating a Dockerfile** to containerize the application
+- **Building a Docker image** and tagging it with your Docker Hub username
+- **Pushing the image to Docker Hub** for storage
+- **Deploying the container** on Kubernetes
+- **Exposing the service via NodePort** to make it accessible externally
+
+
+## Prerequisites
+
+[Note: Install Docker-Desktop and start WSL, then enable Kubernetes inside Docker-Desktop]
+Check whether Kuberntes and Docker commands works on your command prompt
+Check verion using commands as follows:
 ```
 amarn@Amarnath-Laptop MINGW64 /d/development/hello-world-nodejs (main)
 $ kubectl version
@@ -41,15 +53,6 @@ Server: Docker Desktop 4.38.0 (181591)
   Version:          0.19.0
   GitCommit:        de40ad0
 ```
-
-This is a **Hello World Node.js** application, which is containerized using Docker, pushed to Docker Hub, and deployed on a **Kubernetes cluster**. The application is exposed via a **Kubernetes service** with the type set to **NodePort** to allow external access.
-
-This project demonstrates the entire process:
-- **Creating a Dockerfile** to containerize the application
-- **Building a Docker image** and tagging it with your Docker Hub username
-- **Pushing the image to Docker Hub** for storage
-- **Deploying the container** on Kubernetes
-- **Exposing the service via NodePort** to make it accessible externally
 
 ## Steps
 
