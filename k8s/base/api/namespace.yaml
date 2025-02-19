@@ -1,0 +1,5 @@
+# Namespace Configuration for the Node.js application
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev-namespace  # Name of the namespace you want to create

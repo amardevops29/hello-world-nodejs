@@ -1,0 +1,38 @@
+# Deployment Configuration for the Node.js application
+apiVersion: apps/v1             # Specifies the API version of the resource (apps/v1 for deployments)
+kind: Deployment                # The kind of Kubernetes resource (a Deployment for managing Pods)
+metadata:
+  name: hw-deployment           # Name of the Deployment
+  namespace: dev-namespace      # Ensure it is created in the 'my-namespace' namespace
+spec:
+  replicas: 1                   # Number of Pod replicas to maintain
+  selector:
+    matchLabels:
+      app: hw-pod         # The label selector to identify the Pods to be managed by this deployment
+  template:
+    metadata:
+      labels:
+        app: hw-pod       # The label applied to the Pods created by this deployment
+    spec:
+      containers:
+      - name: hw-container        # Name of the container inside the Pod
+        image: amardevops29/hw-app:v1.0 # The Docker image to use for the container (make sure it's available)
+        ports:
+        - containerPort: 5000     # Expose port 5000 on the container for communication
+        resources:
+          requests:
+            memory: "128Mi"  # Minimum memory to request
+            cpu: "250m"      # Minimum CPU to request
+          limits:
+            memory: "256Mi"  # Maximum memory that the container can use
+            cpu: "500m"      # Maximum CPU that the container can use
+        # Readiness Probe: Checks if the container is ready to handle requests
+        readinessProbe:
+          httpGet:
+            path: /         # Path to check for readiness (usually a simple HTTP GET request)
+            port: 5000      # Port where the application listens
+        # Liveness Probe: Checks if the container is still alive (to restart if not healthy)
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000

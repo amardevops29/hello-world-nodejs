@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw-deployment
+  namespace: dev-namespace  # Ensure this matches the namespace in overlays
+spec:
+  selector: # Selector to match the pods associated with the deployment
+    matchLabels:
+      app: hw-pod
+  template: # Template for the pod spec to be created under this deployment
+    metadata:
+      labels:
+        app: hw-pod
+    spec:
+      containers:
+        - name: hw-container
+          image: amardevops29/hw-app:v1.0
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: "128Mi"  # Kubernetes will guarantee at least 128 Mi of memory
+              cpu: "250m"      # Kubernetes will guarantee at least 250 milliCPU
+            limits:
+              memory: "512Mi"  # The container can use a maximum of 512 Mi of memory
+              cpu: "1000m"     # The container can use a maximum of 1000 milliCPU (1 CPU core)

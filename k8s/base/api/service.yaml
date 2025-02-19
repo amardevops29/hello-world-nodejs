@@ -1,0 +1,13 @@
+# Service Configuration for exposing the Node.js application
+apiVersion: v1              # Specifies the API version of the resource (v1 for Services)
+kind: Service               # The kind of Kubernetes resource (a Service to expose the application)
+metadata:
+  name: hw-pod-svc  # Name of the Service
+spec:
+  selector:
+    app: hw-pod         # The label selector to route traffic to the Pods with the "app: hello-nodejs" label
+  ports:
+    - protocol: TCP     # The protocol to use for communication (TCP)
+      port: 80          # Port on which the service will be exposed inside the cluster
+      targetPort: 5000  # Port inside the pod that your application is listening on
+  type: NodePort        # This exposes the service on a port on each node of the cluster
