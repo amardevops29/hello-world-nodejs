@@ -1,4 +1,3 @@
-Here is the content of the README.md in the requested format without any additional decoration changes, ready for you to copy-paste:
 
 ```
 # Hello World Node.js Project
