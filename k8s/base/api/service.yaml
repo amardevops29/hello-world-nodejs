@@ -10,4 +10,5 @@ spec:
     - protocol: TCP     # The protocol to use for communication (TCP)
       port: 80          # Port on which the service will be exposed inside the cluster
       targetPort: 5000  # Port inside the pod that your application is listening on
+      nodePort: 32533   # External port that allows you to access the service
   type: NodePort        # This exposes the service on a port on each node of the cluster
