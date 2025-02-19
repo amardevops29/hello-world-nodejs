@@ -14,10 +14,11 @@ This project demonstrates the entire process:
 ## Steps
 
 ### 1. **Dockerize the Application**
-```
+
 To containerize the Node.js application, create a `Dockerfile` in your project directory. Here’s an example:
 
-```Dockerfile
+Dockerfile
+```
 # Use the official Node.js image as a base
 FROM node:14
 
