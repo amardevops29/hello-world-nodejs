@@ -1,5 +1,5 @@
 ### Hello World Node.js Project
-```
+
 ## Overview
 
 This is a **Hello World Node.js** application, which is containerized using Docker, pushed to Docker Hub, and deployed on a **Kubernetes cluster**. The application is exposed via a **Kubernetes service** with the type set to **NodePort** to allow external access.
@@ -14,7 +14,7 @@ This project demonstrates the entire process:
 ## Steps
 
 ### 1. **Dockerize the Application**
-
+```
 To containerize the Node.js application, create a `Dockerfile` in your project directory. Here’s an example:
 
 ```Dockerfile
