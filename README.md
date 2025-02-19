@@ -1,6 +1,46 @@
 ### Hello World Node.js Project
 
 ## Overview
+# [Note: Install Docker-Desktop and start WSL, then enable Kubernetes inside Docker-Desktop]
+# Check whether Kuberntes and Docker commands works on your command prompt
+# Check verion using commands as follows:
+```
+amarn@Amarnath-Laptop MINGW64 /d/development/hello-world-nodejs (main)
+$ kubectl version
+Client Version: v1.31.4
+Kustomize Version: v5.4.2
+Server Version: v1.31.4
+
+amarn@Amarnath-Laptop MINGW64 /d/development/hello-world-nodejs (main)
+$ docker version
+Client:
+ Version:           27.5.1
+ API version:       1.47
+ Go version:        go1.22.11
+ Git commit:        9f9e405
+ Built:             Wed Jan 22 13:41:44 2025
+ OS/Arch:           windows/amd64
+ Context:           desktop-linux
+
+Server: Docker Desktop 4.38.0 (181591)
+ Engine:
+  Version:          27.5.1
+  API version:      1.47 (minimum version 1.24)
+  Go version:       go1.22.11
+  Git commit:       4c9b3b0
+  Built:            Wed Jan 22 13:41:17 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.25
+  GitCommit:        bcc810d6b9066471b0b6fa75f557a15a1cbf31bb
+ runc:
+  Version:          1.1.12
+  GitCommit:        v1.1.12-0-g51d5e946
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+```
 
 This is a **Hello World Node.js** application, which is containerized using Docker, pushed to Docker Hub, and deployed on a **Kubernetes cluster**. The application is exposed via a **Kubernetes service** with the type set to **NodePort** to allow external access.
 
@@ -159,5 +199,4 @@ This project demonstrates the full flow of:
 - Exposing the service via NodePort for external access
 
 Now, your app is running on Kubernetes and can be accessed externally via the assigned NodePort.
-```
 
