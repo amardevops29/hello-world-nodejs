@@ -1,9 +1,9 @@
-### Hello World Node.js Project
+## Hello World Node.js Project
 
 ## Overview
-# [Note: Install Docker-Desktop and start WSL, then enable Kubernetes inside Docker-Desktop]
-# Check whether Kuberntes and Docker commands works on your command prompt
-# Check verion using commands as follows:
+### [Note: Install Docker-Desktop and start WSL, then enable Kubernetes inside Docker-Desktop]
+### Check whether Kuberntes and Docker commands works on your command prompt
+### Check verion using commands as follows:
 ```
 amarn@Amarnath-Laptop MINGW64 /d/development/hello-world-nodejs (main)
 $ kubectl version
